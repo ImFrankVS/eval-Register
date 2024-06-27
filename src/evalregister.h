@@ -24,7 +24,6 @@ private slots:
 private:
     Ui::evalRegister *ui;
 
-    // Auxiliar Functions
-    void gettingSVGpath(); // QString arg1);
+    void gettingSVGpath();
     void graphsFunction();
 };
