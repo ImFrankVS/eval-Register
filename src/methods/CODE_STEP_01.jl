@@ -1,3 +1,10 @@
+"""
+    Collection of functions for analysis of BRW (HDF5) files generated with the BrainWave program from the company 3Brain.
+    Laboratory 19 of the CINVESTAV in charge of Dr. Rafael Gutierrez Aguilar.
+    Work developed mainly by Isabel Romero-Maldonado (2020 - )
+    isabelrm.biofisica@gmail.com
+    https://github.com/LBitn
+"""
 # •·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·•·•·•·••·•·•·•·•·•·• #
 PATHFUNCTIONS = ".";
 push!( LOAD_PATH, PATHFUNCTIONS );
@@ -64,22 +71,3 @@ n0s = length( string( N ) );
 
 _, ft, fs = ChunkSizeSpaceGraph( Variables, limUpperChunk );
 QtitleGraphSecs = string("$ft seconds");
-
-#@time for n = 1 : N;
-#    BINRAW = OneSegment( Variables, n, N );
-#    BINRAW = Digital2Analogue( Variables, BINRAW );
-#    BINNAME = joinpath( PATHVOLTAGE, string( "BIN", lpad( n, n0s, "0" ), ".jld2" ) ); 
-#    NΔV = stdΔV( Variables, BINRAW, ΔT );
-#    RowCount = UniqueCount( BINRAW );
-#    h = copy( RowCount ); hg = convgauss( sigma, h );
-#    data = vec( RemoveInfs( abs.( log.( hg ) ) ) );
-#    #P = Zplot( data, "W", Qcolor ); PP = title!( QtitleGraph );
-#    #PF = plot( P, layout = ( 1, 1 ), wsize = ( 800, 800 ), cbar = Qcbar);
-#    P = Zplot( data, "W", Qcolor ); title!( QtitleGraph );
-#    PF = plot( P, wsize = ( 800, 800 ), cbar = Qcbar, legendtitle = QtitleGraphSecs, legendposition = :bottom );
-#    FIGNAME = joinpath( PATHFIGURES, string( "BIN", lpad( n, n0s, "0" ), ".svg" ));
-#    FIGNAME = joinpath( PATHFIGURES, FIGNAME );
-#    savefig( PF, FIGNAME );
-#
-#    println("$n listo de $N");
-#end
