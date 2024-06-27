@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>evalRegister</class>
+ <widget class="QMainWindow" name="evalRegister">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>evalRegister</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="accessories-calculator"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QDoubleSpinBox" name="limUpperSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>60</y>
+      <width>66</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="whatsThis">
+     <string>Using more can give better results, but it take a longer timer</string>
+    </property>
+    <property name="specialValueText">
+     <string/>
+    </property>
+    <property name="prefix">
+     <string/>
+    </property>
+    <property name="suffix">
+     <string> GB</string>
+    </property>
+    <property name="minimum">
+     <double>0.200000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>1.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.050000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.300000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLimUpper">
+    <property name="geometry">
+     <rect>
+      <x>86</x>
+      <y>60</y>
+      <width>87</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LimUpperChunk</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="myComboBox">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>118</y>
+      <width>72</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="maxVisibleItems">
+     <number>5</number>
+    </property>
+    <property name="placeholderText">
+     <string>BIN01</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgLabel">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../Imágenes/BIN02.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textFileSelected">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>24</y>
+      <width>108</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFileSelected">
+    <property name="geometry">
+     <rect>
+      <x>128</x>
+      <y>24</y>
+      <width>65</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File Selected</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonEvaluate">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Evaluate</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="colorComboBox">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>238</y>
+      <width>72</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="typeOfGraphComboBox">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>178</y>
+      <width>72</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="colorLabel">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>216</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ColorScheme</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="figureLabel">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>96</y>
+      <width>33</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Figure</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="typeLabel">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>156</y>
+      <width>73</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Type of Graph</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cbarCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>275</y>
+      <width>48</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cbar</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBarStep0">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>508</y>
+      <width>220</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="debugBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
