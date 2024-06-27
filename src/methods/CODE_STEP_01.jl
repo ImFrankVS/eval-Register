@@ -34,7 +34,7 @@ Constants = Dict(
 sigma = 3; # For the Gaussian convolution
 
 # Variables
-#FILEBRW = "C:/Users/murph/OneDrive/Escritorio/BRW's/BRW/0-20s.brw"
+#FILEBRW = ""
 #limUpperChunk = 0.25
 #QtitleGraph = "# V values conv"
 #Qcolor = :Spectral
