@@ -4,3 +4,5 @@ eval-Register is designed for quick evaluations of high-density electrophysiolog
 ![me](https://github.com/ImFrankVS/eval-Register/blob/main/pictures/picture_01.jpg)
 
 ![me](https://github.com/ImFrankVS/eval-Register/blob/main/pictures/picture_02.jpg)
+
+![me](https://github.com/ImFrankVS/eval-Register/blob/main/pictures/picture_03.jpg)
