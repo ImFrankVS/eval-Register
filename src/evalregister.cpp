@@ -24,8 +24,7 @@ evalRegister::evalRegister(QWidget *parent)
     ui->setupUi(this);
     ui->progressBarStep0->hide(); // Hiding QProgressBar....
 
-    // Message for Julia Libraries...
-    //QMessageBox::warning(nullptr, "Julia libraries", "Se viene el show de cmds chavales.");
+    // Message for Julia Libraries... (missing, i need ideas)
 
     // Initializing Julia
     jl_init();
@@ -67,7 +66,6 @@ void evalRegister::actionOpenTriggered()
 {
     // File Dialog
     QString documentsPath = "";
-    //if(ui->textFileSelected->text().isEmpty()) { documentsPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation); }
     QString fileName = QFileDialog::getOpenFileName(this, "Select .brw file", documentsPath, "BRW files (*.brw);;BXR files (*.bxr);;All Files (*)");
 
     QFileInfo fileInfo(fileName);
@@ -113,8 +111,6 @@ void evalRegister::ButtonEvaluateClicked()
                                   "Do you want to start the process?",
                                   QMessageBox::Yes | QMessageBox::No);
     if (reply == QMessageBox::No) { return; }
-
-    //ui->progressBarStep0->show(); //Showing the QProgressBar
 
     // Returnig to the main path
     QString currentPath = QDir::currentPath();
