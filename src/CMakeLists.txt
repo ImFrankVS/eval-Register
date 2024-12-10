@@ -16,12 +16,37 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Copy the files .jl into the binary dir
-file(COPY methods/CODE_STEP_01.jl
-          methods/MODULE_STEP_01.jl
-          methods/MODULE_GRAPHS.jl
+file(COPY methods/CODE_STEP_00.jl
+          methods/CODE_STEP_01.jl
+          methods/CODE_STEP01_Figures.jl
+          methods/CODE_SPEC.jl
+          methods/CODE_BinBehavior.jl
           methods/DEPS_01.jl
-          methods/GRAPHS_01.jl
+          methods/Suppressor.jl
+          methods/AllSTEPs.jl
+
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/methods
+)
+
+file(COPY styles/ManjaroMix.qss
+          styles/Wstartpage.qss
+          styles/Ubuntu.qss
+          styles/ElegantDark.qss
+          styles/ConsoleStyle.qss
+          styles/MaterialDark.qss
+          styles/darkstyle
+
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/styles
+)
+
+file(COPY ${CMAKE_SOURCE_DIR}/resources
+
+     DESTINATION ${CMAKE_BINARY_DIR}
+)
+
+file(COPY ${CMAKE_SOURCE_DIR}/icon.ico
+
+     DESTINATION ${CMAKE_BINARY_DIR}
 )
 
 find_package(Qt5 5.15.2 REQUIRED COMPONENTS Widgets)
@@ -32,9 +57,9 @@ set(APP_ICON_RESOURCE_WINDOWS
 )
 set(SOURCE_FILES
     main.cpp
-    evalregister.cpp
-    evalregister.h
     evalregister.ui
+    evalregister.h evalregister.cpp
+    FigureViewer.h FigureViewer.cpp
 )
 
 add_executable(evalRegister
